@@ -1,0 +1,12 @@
+<ul>
+  @for(user of users; track user) {
+    <li>{{user['name']}}</li>
+  }
+</ul>
+
+<ul>
+  @for(user of (users$ | async); track user) {
+    <li>{{user['name']}}</li>
+  }
+</ul>
+
