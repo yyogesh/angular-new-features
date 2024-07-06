@@ -1,4 +1,19 @@
 <button (click)="onCountClick()">Count {{count}}</button>
+
 <div>
-  {{date}}
+  Today date is {{date}}
 </div>
+
+<ul>
+  @for(user of users; track user.name) {
+    <li>{{user.name}}</li>
+  }
+</ul>
+
+<hr>
+
+<ul>
+  @for(user of (users$ | async); track user.name) {
+    <li>{{user.name}}</li>
+  }
+</ul>
