@@ -1,0 +1,35 @@
+<mat-card class="cart-card">
+    <mat-card-title>Your Shopping Cart</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+            @for(item of productService.getCart(); track item) {
+                <mat-list-item>
+                    <img title="product-image" matListItemAvatar [src]="item.product.imageUrl" [alt]="item.product.name">
+                    <div matListItemTitle>{{ item.product.name }}</div>
+                    <div matListItemLine>
+                        <div class="mat-list-item-container">
+                            <mat-form-field class="quantity-input">
+                                <input aria-label="quantity" matInput type="number" [value]="item.quantity"
+                                    min="1" (change)="updateQuantity(item.product.id, $event)">
+                            </mat-form-field>
+                            <span class="item-price">${{ (item.quantity * item.product.price).toFixed(2) }}</span>
+                            <button mat-icon-button color="warn" (click)="removeFromCart(item.product.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </mat-list-item> 
+            }
+        </mat-list>
+        @if(productService.getCart().length) {
+            <div class="cart-total" >
+                Total: ${{ getTotal().toFixed(2) }}
+            </div>
+        }
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="accent" [disabled]="!productService.getCart().length">
+            Proceed to Checkout
+        </button>
+    </mat-card-actions>
+</mat-card>

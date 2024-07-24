@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <span>Ysquare Shop</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-icon-button [matBadge]="productService.getCartItemsCount()" 
+  [matBadgeHidden]="productService.getCartItemsCount() === 0" matBadgeColor="accent">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="app-container">
+  <app-product-list></app-product-list>
+  <app-shopping-cart></app-shopping-cart>
+</div>

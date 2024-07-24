@@ -1,0 +1,16 @@
+<div class="product-grid">
+    @for( product of productService.getProducts(); track product) {
+    <mat-card class="product-card">
+        <img title="product-image" mat-card-image [src]="product.imageUrl" [alt]="product.name">
+        <mat-card-content>
+            <h2>{{ product.name }}</h2>
+            <p class="price">${{ product.price.toFixed(2) }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="addToCart(product)">
+                <mat-icon>add_shopping_cart</mat-icon> Add to Cart
+            </button>
+        </mat-card-actions>
+    </mat-card>
+    }
+</div>

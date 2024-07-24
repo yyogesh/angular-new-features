@@ -1,0 +1,32 @@
+.cart-card {
+    min-width: 600px;
+    margin: 20px auto;
+  }
+  .mat-mdc-card-title {
+    font-size: 1.5em;
+    margin: 15px;
+  }
+  .quantity-input {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .item-price {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .mat-mdc-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mat-list-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

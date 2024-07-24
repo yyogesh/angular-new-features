@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .mat-mdc-card {
+    transition: box-shadow 0.3s ease-in-out;
+  
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    }
+  }
+  
+  .mat-mdc-card-content .mat-mdc-list-item {
+    min-height: 120px;
+  }
+
+  .mat-badge-content {
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  .mat-badge-small .mat-badge-content {
+    font-size: 9px;
+  }
+  
+  .mat-badge-large .mat-badge-content {
+    font-size: 24px;
+  }
+  
+  .mat-icon {
+    font-size: 24px;
+  }
+  
+  button.mat-mdc-icon-button {
+    height: 48px;
+    width: 48px;
+  }

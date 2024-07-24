@@ -1,0 +1,31 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .mat-mdc-card-content {
+    flex-grow: 1;
+  }
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  .mat-mdc-card-actions {
+    padding: 16px;
+  }
